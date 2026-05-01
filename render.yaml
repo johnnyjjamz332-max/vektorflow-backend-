@@ -1,0 +1,39 @@
+services:
+    - type: web
+    name: vektorflow-backend-router
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+            - key: META_APP_ID
+        sync: false
+            - key: META_APP_SECRET
+        sync: false
+            - key: META_REDIRECT_URI
+        sync: false
+            - key: TIKTOK_CLIENT_KEY
+        sync: false
+            - key: TIKTOK_CLIENT_SECRET
+        sync: false
+            - key: TIKTOK_REDIRECT_URI
+        sync: false
+            - key: X_CLIENT_ID
+        sync: false
+            - key: X_CLIENT_SECRET
+        sync: false
+            - key: X_REDIRECT_URI
+        sync: false
+            - key: PLAID_CLIENT_ID
+        sync: false
+            - key: PLAID_SECRET
+        sync: false
+            - key: DEEPSEEK_API_KEY
+        sync: false
+            - key: OPENAI_API_KEY
+        sync: false
+            - key: GEMINI_API_KEY
+        sync: false
+            - key: FRONTEND_URL
+        sync: false
